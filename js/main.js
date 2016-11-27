@@ -6,27 +6,39 @@ IMAGE_FOLDER = "/images/";
 
 window.onload = function(){
 
+  // Setup jukebox full of a variety of songs.
   j = new Jukebox();
   loadJukebox(j);
   j.listSongs();
+
+  // create player
+  player = document.getElementById('audio-player');
 
   initializeListeners();
 
 }
 
 function initializeListeners() {
-  player = document.getElementById('audio-player');
   btnStart = document.getElementById('start-button');
   btnStop = document.getElementById('stop-button');
   btnVolUp = document.getElementById('vol-up-button');
   btnVolDown = document.getElementById('vol-down-button');
 
   btnStart.addEventListener("click", function(){
+    console.log(player);
     player.play();
   })
 
   btnStop.addEventListener("click", function(){
     player.pause();
+  })
+
+  btnVolUp.addEventListener("click", function(){
+    player.volume += .01;
+  })
+
+  btnVolDown.addEventListener("click", function(){
+    player.volume -= .01;
   })
 }
 
@@ -36,10 +48,10 @@ function Jukebox(){
     this.songs.push(s);
   }
   this.playSong = function(selection){
-
+    
   }
   this.listSongs = function(){
-    console.log(this.songs);
+    // console.log(this.songs);
   }
 }
 
