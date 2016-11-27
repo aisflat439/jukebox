@@ -23,6 +23,7 @@ function initializeListeners() {
   btnStop = document.getElementById('stop-button');
   btnVolUp = document.getElementById('vol-up-button');
   btnVolDown = document.getElementById('vol-down-button');
+  trackPicker = document.getElementById('track-selector')
 
   btnStart.addEventListener("click", function(){
     console.log(player);
@@ -40,15 +41,20 @@ function initializeListeners() {
   btnVolDown.addEventListener("click", function(){
     player.volume -= .01;
   })
+
+  trackPicker.addEventListener("input", function(){
+    // make this work somehow
+  })
 }
 
 function Jukebox(){
   this.songs = [];
+
   this.addSong = function(s){
     this.songs.push(s);
   }
   this.playSong = function(selection){
-    
+      this.songs[selection];
   }
   this.listSongs = function(){
     // console.log(this.songs);
