@@ -4,10 +4,17 @@
     <meta charset="utf-8">
     <title>JukeBox</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="js/main.js"></script>
   </head>
   <body>
     <div class="main-container">
-      <audio src="assets/01 45.mp3" preload="auto" controls></audio>
+      <audio id="audio-player" src="assets/music/01 45.mp3" preload="auto"></audio>
+        <div id="audio-player-buttons">
+          <button id="start-button" type="button" name="button">Start</button>
+          <button id="stop-button" type="button" name="button">Stop</button>
+          <button id="vol-up-button" type="button" name="button">Volume up</button>
+          <button id="vol-down-button" type="button" name="button">Volume Down</button>
+        </div>
     </div>
   </body>
 </html>
