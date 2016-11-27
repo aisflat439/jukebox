@@ -23,11 +23,11 @@ function Jukebox(){
   this.addSong = function(s){
     this.songs.push(s);
   }
-  this.playSong = function(s){
-    this.songs.push(s);
+  this.playSong = function(selection){
+
   }
   this.listSongs = function(){
-    // console.log(this.songs);
+    console.log(this.songs);
   }
 }
 
