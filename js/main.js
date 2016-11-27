@@ -15,7 +15,19 @@ window.onload = function(){
 }
 
 function initializeListeners() {
+  player = document.getElementById('audio-player');
+  btnStart = document.getElementById('start-button');
+  btnStop = document.getElementById('stop-button');
+  btnVolUp = document.getElementById('vol-up-button');
+  btnVolDown = document.getElementById('vol-down-button');
 
+  btnStart.addEventListener("click", function(){
+    player.play();
+  })
+
+  btnStop.addEventListener("click", function(){
+    player.pause();
+  })
 }
 
 function Jukebox(){
