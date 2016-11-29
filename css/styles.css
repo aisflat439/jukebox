@@ -10,6 +10,14 @@ body {
   min-height: 100vh;
 }
 
+#song {
+  margin: 5px;
+  height: 100px;
+  width: 100px;
+  background-color: "blue";
+  background: url('../assets/images/ec_1.jpg') center / cover;
+}
+
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) { }
 /* Medium devices (desktops, 992px and up) */
